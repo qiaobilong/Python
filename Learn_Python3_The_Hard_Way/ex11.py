@@ -1,0 +1,15 @@
+print('''qiaobilong''')
+print("How old are you?", end = ' ')
+age = input()
+print("How tall are you?", end = ' ')
+height = input()
+print("How much do you weigh?", end = ' ')
+weight = input()
+print(f"so,you're {age} old, {height} tall {weight} heavy.")
+
+
+print("请输入x:",end = ' ')
+x = int(input())
+print("请输入y:",end = ' ')
+y = int(input())
+print(x * y)
