@@ -1,0 +1,79 @@
+<html lang="en, zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <link rel="stylesheet" href="note.css">
+</head>
+<body>
+<div class="title">
+    <h1>html标签及属性</h1>
+</div>
+<div>
+    <ol>
+        <li>lang="en"告诉搜索引擎爬虫，我们的网站是关于什么内容的</li>
+        <li>p段落标签，独成一段</li>
+        <li>h1~h6标题标签，独成一段，加粗</li>
+        <li style="color:#f40">4.strong加粗，em斜体，del删除</li>
+        <li>div独占一行，span无效果，容器，分块代码</li>
+        <li>回车、空格代表文本分隔符，多个等于一个</li>
+        <li>回车：&lt;br&gt;</li>
+        <li>空格："&nbsp;"&nbsp;"&nbsp;"</li>
+    </ol>
+</div>
+<div class="title">
+    <h1>引入CSS</h1>
+</div>
+<ol>
+    <li>
+        行间样式<br>div里加style属性
+    </li>
+    <li>页面级css<br>在head里写一个style</li>
+    <li>外部css引入<br>在head里写一个link</li>
+</ol>
+<div class="title">
+    <h1>选择器权重</h1>
+</div>
+
+<ol>
+    <li>
+        <strong style="color:red;">
+            !important&nbsp;>&nbsp;行间样式&nbsp;>&nbsp;id&nbsp;>&nbsp;class/属性&nbsp;>&nbsp;标签选择器&nbsp;>&nbsp;通配符
+        </strong>
+        <br>
+        !important写在css某一属性后面
+    </li>
+    <li>
+        <table border="2">
+            <tr>
+                <th>CSS选择器</th>
+                <th>权重值</th>
+            </tr>
+            <tr>
+                <td>!important</td>
+                <td class="right">正无穷（正无穷+1>正无穷）</td>
+            </tr>
+            <tr>
+                <td>行间样式</td>
+                <td class="right">1000</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td class="right">100</td>
+            </tr>
+            <tr>
+                <td>class|属性|伪类</td>
+                <td class="right">10</td>
+            </tr>
+            <tr>
+                <td>标签|伪元素</td>
+                <td class="right">1</td>
+            </tr>
+            <tr>
+                <td>通配符</td>
+                <td class="right">0</td>
+            </tr>
+        </table>
+    </li>
+</ol>
+</body>
+</html>

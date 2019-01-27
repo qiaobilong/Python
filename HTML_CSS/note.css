@@ -1,0 +1,15 @@
+*{
+    margin:2px;
+    }
+
+.title{
+    background-color:yellow;
+    color:red;
+    }
+
+table{
+    width:400px;
+}
+.right{
+    text-align:right;
+}
