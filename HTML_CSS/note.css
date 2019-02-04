@@ -1,5 +1,5 @@
 *{
-    margin:2px;
+    margin:5;
     }
 
 .title{
@@ -8,8 +8,39 @@
     }
 
 table{
-    width:400px;
-}
+    width:400;
+    }
+
 .right{
     text-align:right;
-}
+    }
+
+h6{
+    color:#666;
+    }
+
+[class="attr"]{
+    background-color:#ccc
+    }
+
+#attr{
+    background-color:#f40
+    }
+.wrapper span em{
+    background-color:#aaa
+    }
+
+div > em{
+    background-color:#bbb
+    }
+
+span.demo{
+    background-color:#ddd
+    }
+
+.demo1,
+.demo2{
+    width:200;
+    height:20;
+    margin:50;
+    }

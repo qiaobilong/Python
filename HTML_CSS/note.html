@@ -13,8 +13,18 @@
         <li>lang="en"告诉搜索引擎爬虫，我们的网站是关于什么内容的</li>
         <li>p段落标签，独成一段</li>
         <li>h1~h6标题标签，独成一段，加粗</li>
-        <li style="color:#f40">4.strong加粗，em斜体，del删除</li>
-        <li>div独占一行，span无效果，容器，分块代码</li>
+        <li style="color:#f40">
+            <strong>
+                <em>
+                    <del>
+                        4.strong加粗，em斜体，del删除
+                    </del>
+                </em>
+            </strong>
+        </li>
+        <li>
+            div独占一行（section与div用法一致，更语义化），span无效果，容器，分块代码
+        </li>
         <li>回车、空格代表文本分隔符，多个等于一个</li>
         <li>回车：&lt;br&gt;</li>
         <li>空格："&nbsp;"&nbsp;"&nbsp;"</li>
@@ -46,7 +56,7 @@
         <table border="2">
             <tr>
                 <th>CSS选择器</th>
-                <th>权重值</th>
+                <th>权重值(进制为256)</th>
             </tr>
             <tr>
                 <td>!important</td>
@@ -73,6 +83,63 @@
                 <td class="right">0</td>
             </tr>
         </table>
+    </li>
+</ol>
+<div class="title">
+    <h1>选择器（权重相同取后者）</h1>
+</div>
+<ol>
+    <li>
+        <h6>
+            标签选择器
+        </h6>
+    </li>
+    <li>
+        <span class="attr">
+            属性选择器：
+        </span>
+        <span id="attr">
+            id选择器 == 属性选择器 ?????
+        </span>
+        <span>
+
+        </span>
+    </li>
+    <li>
+        <div class="wrapper" style="margin:0px;">
+            <span>
+                <em>
+                    父子选择器/派生选择器：
+                </em>
+            </span>
+            <strong style="color:red">
+                自右向左
+            </strong>
+            <span>
+                识别标签（浏览器底层为提升效率）
+            </span>
+        </div>
+    </li>
+    <li>
+        <div>
+            <em>直接子元素选择器</em>
+            <strong>
+                <em>（非直接子元素则无样式）</em>
+            </strong>
+        </div>
+    </li>
+    <li>
+        <span class="demo">并列选择器：</span>
+        <strong class="demo">CSS中多个限制条件间不加空格</strong>
+        <span>（类似and逻辑）</span>
+    </li>
+    <li>
+        <span class="demo1">
+            分组选择器：
+        </span>
+        <span class="demo2">
+            逗号分隔每个选择器
+        </span>
     </li>
 </ol>
 </body>
