@@ -55,8 +55,8 @@
     <li>
         <table border="2">
             <tr>
-                <th>CSS选择器</th>
-                <th>权重值(进制为256)</th>
+                <th style="width:130">CSS选择器</th>
+                <th style="width:220">权重值(进制为256)</th>
             </tr>
             <tr>
                 <td>!important</td>
@@ -142,5 +142,75 @@
         </span>
     </li>
 </ol>
+<div class="title">
+    <h1>CSS</h1>
+</div>
+<ul>
+    <li style="color:f40;font-size:18px;">
+        css参考手册（转w3c）：http://www.w3school.com.cn/cssref/index.asp
+    </li>
+    <li>
+        <table border="2">
+            <tr>
+                <th style="width:150">属性</th>
+                <th style="width:200">含义</th>
+                <th style="width:100">默认值</th>
+                <th style="width:500">属性值</th>
+            <tr>
+                <td>font-size</td>
+                <td>字体大小</td>
+                <td>16px</td>
+                <td>设置的是字体的高度，而非宽度</td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>字体粗细</td>
+                <td>normal</td>
+                <td>细→粗：lighter，normal(相当于400)，bold(相当于700)，bolder（或者100,200,......,900）</td>
+            </tr>
+            <tr>
+                <td>font-style</td>
+                <td>字体风格（斜体）</td>
+                <td>normal</td>
+                <td>normal正常，italic斜体，oblique倾斜（与italic看起来没啥区别）</td>
+            </tr>
+            <tr>
+                <td>font-family</td>
+                <td>字体（宋体，黑体...）</td>
+                <td>取决于浏览器</td>
+                <td>normal正常，italic斜体，oblique倾斜（与italic看起来没啥区别）</td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>字体颜色</td>
+                <td></td>
+                <td>
+                    <ol>
+                        <li>土鳖式（纯英文单词red,green）</li>
+                        <li>颜色代码：#ff4400可简写为#f40</li>
+                        <li>颜色函数：rgb(255, 255, 255)</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>加个边框,用于画三角形</td>
+                <td></td>
+                <td>此属性有3个参数，更多参数详见w3c
+                    <ol>
+                        <li>border-width</li>
+                        <li>border-style：设置线条样式</li>
+                        <li>border-color</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <li>
+        <div id="triangle"></div>
+        <span>此三角是用border画的</span>
+    </li>
+</ul>
 </body>
 </html>
+</tr>

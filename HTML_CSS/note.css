@@ -7,10 +7,6 @@
     color:red;
     }
 
-table{
-    width:400;
-    }
-
 .right{
     text-align:right;
     }
@@ -43,4 +39,13 @@ span.demo{
     width:200;
     height:20;
     margin:50;
+    }
+
+#triangle{
+    width:0px;
+    height:0px;
+    border:20px solid black;
+    border-top-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
     }
