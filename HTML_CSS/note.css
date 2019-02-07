@@ -49,3 +49,14 @@ span.demo{
     border-right-color:transparent;
     border-bottom-color:transparent;
     }
+
+#line{
+    border:1px solid black;
+    text-align:center;
+    height:50px;
+    line-height:50px;
+    }
+
+#pseudo_classes:hover{
+    background-color:#f40;
+    }
