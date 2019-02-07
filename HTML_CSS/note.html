@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="note.css">
 </head>
 <body>
-<div style="font-size:20px;">
+<div style="font-size:26px;">
     课程地址：
     <a href="https://study.163.com/course/introduction/1004165002.htm">
         https://study.163.com/course/introduction/1004165002.htm
@@ -217,6 +217,12 @@
                 </td>
             </tr>
             <tr>
+                <td>border-redius</td>
+                <td>圆角</td>
+                <td></td>
+                <td>正圆：50%</td>
+            </tr>
+            <tr>
                 <td>text-align</td>
                 <td>水平对齐方式</td>
                 <td>取决于浏览器</td>
@@ -228,7 +234,7 @@
                 <td></td>
                 <td>
                     <div id="line">
-                        垂直居中：将单行高度与容器高度设成一致的（line-height == height）
+                        垂直居中（单行）：将单行高度与容器高度设成一致的（line-height == height）
                     </div>
                 </td>
             </tr>
@@ -238,6 +244,24 @@
                 <td></td>
                 <td>2em：缩进两个文本距离（em可以用于指定倍数行高，如line-height:1.2em）</td>
             </tr>
+            <tr>
+                <td>position</td>
+                <td>定位</td>
+                <td></td>
+                <td>
+                    absolute、relative、fixed<br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>z-index</td>
+                <td>设置元素在第几层</td>
+                <td>0</td>
+                <td>
+                    必须有position才生效<br>
+                    值越大，越靠近屏幕外
+                </td>
+            </tr>
         </table>
     </li>
     <li>
@@ -245,5 +269,71 @@
         <span>此三角是用border画的</span>
     </li>
 </ul>
+<div class="title">
+    <h1>标签归类</h1>
+</div>
+<ul>
+    <li>
+        <table border="2">
+            <tr>
+                <th>分类</th>
+                <th>特点</th>
+                <th>示例</th>
+                <th>css中display的值（可手工更改）</th>
+            </tr>
+            <tr>
+                <td>行级元素、内联元素</td>
+                <td>内容决定元素所占位置<br>不可用通过css改变宽高</td>
+                <td>span,strong,em,a,del</td>
+                <td>inline</td>
+            </tr>
+            <tr>
+                <td>块级元素</td>
+                <td>独占一行<br>可以通过css改变宽高</td>
+                <td>div,p,ul,li,ol,form,address</td>
+                <td>block</td>
+            </tr>
+            <tr>
+                <td>行级块元素</td>
+                <td>内容决定大小<br>可以改宽高</td>
+                <td>
+                    img
+                    <img src="note.jpg" alt="这里其实有张图片的">
+                </td>
+                <td>inline-block</td>
+            </tr>
+        </table>
+    </li>
+</ul>
+<div class="title">
+    <h1>盒子模型</h1>
+</div>
+<ul>
+    <li>外边距：margin（上-右-下-左，上-左右-下，上下-左右）</li>
+    <li>盒子壁：border</li>
+    <li>内边距：padding（上-右-下-左，上-左右-下，上下-左右）</li>
+    <li>盒子内容：width+height</li>
+    <li>
+        <div id="box">
+            box
+        </div>
+    </li>
+</ul>
+<div class="title">
+    <h1>层模型（position）</h1>
+</div>
+<ol>
+    <li>
+        absolute：脱离原来位置进行定位（上升到新的一个图层）<br>
+        <div style="color:#f40">
+            相对于最近的有定位的父级进行定位，如果没有则相对于文档进行定位（课时6-110分钟处）
+        </div>
+    </li>
+    <li>relative：保留原来位置进行定位（上升到新的一个图层）</li>
+    <li>fixed：广告定位</li>
+</ol>
+<div id="center" style="font-size:30px;">
+    感谢度一教育
+</div>
 </body>
 </html>

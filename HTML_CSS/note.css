@@ -2,6 +2,13 @@
     margin:5;
     }
 
+.inline_div{
+    display:inline;
+    margin:0px;
+    border:0px;
+    padding:0px;
+    }
+
 .title{
     background-color:yellow;
     color:red;
@@ -59,4 +66,24 @@ span.demo{
 
 #pseudo_classes:hover{
     background-color:#f40;
+    }
+
+#box{
+    margin:20px;
+    border:30px solid black;
+    padding-top:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    width:50px;
+    height:50px;
+    background-color:red;
+    }
+
+#center{
+    font-family:YouYuan;
+    position:fixed;
+    left:100%;
+    top:50%;
+    margin-left:-30px;
+    margin-top:-120px;
     }
