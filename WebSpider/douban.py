@@ -12,6 +12,7 @@ import random
 import time
 import urllib3
 from bs4 import BeautifulSoup
+import datetime
 
 
 def get_score(attrs):
@@ -96,20 +97,27 @@ def main(movie_id, movie_name, pages):
         # url = f'https://movie.douban.com/subject/{movie_id}/comments?start={i}&limit=20&sort=new_score&status=F'
         data = get_data(url, movie_name)
         for j in data:
-            with open('douban.json', 'a', encoding='utf-8') as file:
+            with open(f'{movie_name}.txt', 'a', encoding='utf-8') as file:
                 # ensure_ascii参数为False时，以中文的形式记录
-                file.write(json.dumps(j, ensure_ascii=False))
+                # file.write(json.dumps(j, ensure_ascii=False))
+                comment = j['comment'].replace(' ', '').replace('\n', '')
+                file.write(f"{j['movie_name']},{j['user_id']},{j['username']},{j['create_time']},"
+                           f"{j['score'].replace(' ', '')},{j['is_useful']},{comment}\n")
+            file.close()
+        print(f'{datetime.datetime.now()} 已获取{i + 20}条数据')
 
 
 if __name__ == '__main__':
+    # f-string大括号内无法使用\转义，曲线救国，将涉及\的数据定义为变量,但没弄明白咋用
+    # newline = '\n'
     headers = [{'User-Agent': 'Chrome/68.0.3440.106'},
                {'User-Agent': 'Safari/537.36'},
                {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64)'}]
     proxies = {
         'http': 'http://218.85.22.156:9999'
     }
-    begin = 26394100
-    end = 26394100
+    begin = 1866473
+    end = 1866473
     pages = [x * 20 for x in range(0, 50)]
     for i in get_movie(begin, end + 1):
         main(i['movie_id'], i['movie_name'], pages)
